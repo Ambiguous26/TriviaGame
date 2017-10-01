@@ -1,0 +1,32 @@
+.image	 {
+	background-image: 	url("https://media.giphy.com/media/hUXSFaQ1zyiE8/giphy.gif");
+}
+
+#mainContainer {
+	margin: 	20px 0px 20px 0px;
+}
+#container {
+	background-color: grey;
+}
+#header {
+	color: 	white;
+	text-align: 	center;
+	font-size: 	60px;
+}
+#startButton {
+	text-align: 	center;	
+
+}
+button {
+	font-size: 	50px;
+	margin: 	20px;
+}
+p {
+	color: white;
+	text-align: center;
+}
+html, body {
+	background-color: black; 
+	margin: 0px;
+	padding: 0px;
+}
