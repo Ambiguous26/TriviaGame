@@ -30,3 +30,14 @@ html, body {
 	margin: 0px;
 	padding: 0px;
 }
+
+#clock {
+	color: white;
+	text-align: center;
+
+}
+#questions {
+	color:white;
+	text-align: center;
+	
+}

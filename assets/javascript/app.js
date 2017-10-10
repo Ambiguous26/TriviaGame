@@ -121,7 +121,159 @@ var endContainer;
 
 
 
+var questions = [
+	
+		{
+		question: "Brass gets discoloured in air because of the presence of which of the following gases in air?",
+			answerA: "Oxygen",
+			answerB: "Hydrogen sulphide",
+			answerC:  "Carbon dioxide",
+			answerD: "Nitrogen",
+			correctAns: "B" 
+			
+		},
+		
+		{
+		question: "Which of the following is a non metal that remains liquid at room temperature?",
+			answerA: "Phosphorous",
+			answerB: "Bromine",
+			answerC: "Chlorine",
+			answerD: "Helium",
+			correctAns: "B"
+		},
+		
+		{
+		question: "Chlorophyll is a naturally occurring chelate compound in which central metal?",
+			answerA: "Copper",
+			answerB: "Magnesium",
+			answerC: "Iron",
+			answerD: "Calcium",
+			correctAns: "B"
+		},
 
+		{
+		question: "Which of the following is used in pencils?",
+			answerA: "Graphite",
+			answerB: "Silicon",
+			answerC: "Charcoal",
+			answerD: "Phosphorous",
+			correctAns: "A"
+		},
+		
+		{
+		question: "The gas usually filled in the electric bulb is?",
+			answerA: "Nitrogen",
+			answerB: "Hydrogen",
+			answerC: "Carbon dioxide",
+			answerD: "Oxygen",
+			correctAns: "A"
+		},
+
+		{
+		question: "Which of the gas is not known as green house gas?",
+			answerA: "Methane",
+			answerB: "Nitrous oxide",
+			answerC: "Carbon dioxide",
+			answerD: "Hydrogen",
+			correctAns: "D"
+		},
+
+		{
+		question: "The hardest substance available on earth is?",
+			answerA: "Gold",
+			answerB: "Iron",
+			answerC: "Diamond",
+			answerD: "Platinum",
+			correctAns: "C"
+		},
+
+		{
+		question: "Which of the following is used as a lubricant?",
+			answerA: "Graphite",
+			answerB: "Silica",
+			answerC: "Iron Oxide",
+			answerD: "Diamond",
+			correctAns: "A"
+		},
+
+		{
+		question: "When an iron nail gets rusted, iron oxide is formed?",
+			answerA: "Without any change in the weight of the nail",
+			answerB: "With decrease in the weight of the nail",
+			answerC: "With increase in the weight of the nail",
+			answerD: "Without any change in colour or weight of the nail",
+			correctAns: "C"
+		},
+
+		{
+		question: "What causes the sky to be blue?",
+			answerA: "Refelction of the Ocean",
+			answerB: "Sunlight passing through our atmosphere",
+			answerC: "Chemical reaction in air molecules",
+			answerD: "Blue stands for beautiful",
+			correctAns: "B"
+		}
+
+
+];
+
+console.log(questions[1]);
+
+function showQuestions () {
+	for (var i = 0; i < questions.length; i++) {
+		console.log(questions[i]);
+		var newDiv = $("<div>");
+		newDiv.attr("class","questionWrapper");
+		var newQuestion = $("<p>");
+		newQuestion.text(questions[i].question);
+		newDiv.append(newQuestion);
+
+		var newAnswerA = $("<p>");
+		newAnswerA.text(questions[i].answerA);
+		newDiv.append(newAnswerA);
+
+		var newAnswerB = $("<p>");
+		newAnswerB.text(questions[i].answerB);
+		newDiv.append(newAnswerB);
+
+		var newAnswerC = $("<p>");
+		newAnswerC.text(questions[i].answerC);
+		newDiv.append(newAnswerC);
+
+		var newAnswerD = $("<p>");
+		newAnswerD.text(questions[i].answerD);
+		newDiv.append(newAnswerD); 
+
+		$("#questions").append(newDiv);
+	
+		
+
+		// div.append(
+		// 	"<p>" + questions[i].question + "</p>" + "<div class='buttons'></div" 
+		
+		// );
+		
+	}
+
+
+}
+
+showQuestions();
+
+
+
+	// append: function(){
+	// 	$("#questions").append("<h2/>").html(game.question[]);
+	// }
+
+
+
+	// updateHTML: function () {
+
+	// }
+
+
+// var currentQuestion: null;
 
 //  Variable that will hold our setInterval that runs the stopwatch
 var intervalId;
@@ -153,7 +305,7 @@ var stopwatch = {
 		// created variable called counter and set an interval and do it this often.- references the object and function count.
 		counter = setInterval (function() {
 			stopwatch.time--;
-			$("#clock").html(stopwatch.time);
+			$("#clock").html("Time Remaining: " + stopwatch.time);
 		 	}, 1000);
 		clockRunning = true;
 		
@@ -210,7 +362,16 @@ var stopwatch = {
 	};
 $("#startButton").on("click", function(){
 	stopwatch.start(stopwatch.time);
+	// game.questions.append(game.questions);\
+	$("#questions").append($("h2"));
 });
+
+
+
+
+
+
+
 
 };//end of script
 
